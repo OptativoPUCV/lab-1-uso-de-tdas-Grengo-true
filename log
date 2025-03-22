@@ -23,3 +23,13 @@ exercises.c:95:1: error: expected identifier or '(' before '}' token
  ^
 Compilation failed
 ff2c488
+Fri, Mar 21, 2025 11:11:50 PM: 
+ exercises.c | 11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'eliminaElementos':
+exercises.c:86:17: error: expected expression before '==' token
+       if (dato* == elem) {
+                 ^~
+Compilation failed
+bbb580a
