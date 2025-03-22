@@ -109,3 +109,9 @@ exercises.c:130:13: error: 'caracter' undeclared (first use in this function)
 exercises.c:130:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 ef51899
+Sat, Mar 22, 2025  5:14:36 PM: 
+ exercises.c | 41 ++++++++++++++++++++++-------------------
+ 1 file changed, 22 insertions(+), 19 deletions(-)
+ tests:  9|0
+total_score: 70/70
+f00b45f
