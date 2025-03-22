@@ -98,3 +98,14 @@ exercises.c:130:29: error: initialization makes pointer from integer without a c
 cc1.exe: all warnings being treated as errors
 Compilation failed
 22e4184
+Sat, Mar 22, 2025  5:13:42 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:130:13: error: 'caracter' undeclared (first use in this function)
+            *caracter = cadena[i];
+             ^~~~~~~~
+exercises.c:130:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ef51899
