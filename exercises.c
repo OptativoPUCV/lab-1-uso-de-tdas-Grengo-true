@@ -124,16 +124,15 @@ int parentesisBalanceados(char *cadena) {
    int i = 0;
    
    while (cadena[i] != '\0') {
-       if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{') {
-           char *c = NULL;
-           *c = cadena[i];
-           push(pila, c);
+       if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{') 
+       {
+           char *caracter = (char *)malloc(sizeof(char));
+           *caracter = cadena[i];
+           push(pila, caracter);
        } 
-       else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') {
-           if (top(pila) == NULL) {
-               free(pila);
-               return 0;
-           }
+       else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') 
+       {
+
            char *tope = (char *)top(pila);
            if ((cadena[i] == ')' && *tope != '(') ||
                (cadena[i] == ']' && *tope != '[') ||
