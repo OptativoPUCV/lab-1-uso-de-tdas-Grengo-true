@@ -123,35 +123,33 @@ int parentesisBalanceados(char *cadena) {
    Stack *pila = create_stack();
    int i = 0;
    
-   while (cadena[i] != '\0') {
-       if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{') {
-           char *c = (char *)malloc(sizeof(char));
-           *c = cadena[i];
-           push(pila, c);
+   while (cadena[i] != '\0') 
+   {
+       if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{') 
+       {
+           void *caracter = cadena[i];
+           push(pila, caracter);
        } 
-       else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') {
-           if (top(pila) == NULL) {
-               free(pila);
-               return 0;
-           }
-           
+       else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') 
+       {
            char *tope = (char *)top(pila);
-           
-           if ((cadena[i] == ')' && *tope != '(') ||
-               (cadena[i] == ']' && *tope != '[') ||
-               (cadena[i] == '}' && *tope != '{')) {
-               free(pila);
+           if ((cadena[i] == ')' && *tope != '(') ||(cadena[i] == ']' && *tope != '[') ||(cadena[i] == '}' && *tope != '{')) 
+           {
                return 0;
            }
-           
            pop(pila);
        }
        i++;
    }
-   
-   int resultado = (top(pila) == NULL) ? 1 : 0;
-   free(pila);
-   
+   int resultado;
+   if (top(pila) == NULL) 
+   {
+    resultado = 1;
+   } 
+   else 
+   {
+    resultado = 0;
+   }
    return resultado;
 }
 

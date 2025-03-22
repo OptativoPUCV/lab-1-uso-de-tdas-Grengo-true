@@ -87,3 +87,14 @@ Sat, Mar 22, 2025  5:08:03 PM:
  tests:  9|0
 total_score: 70/70
 d8b3c77
+Sat, Mar 22, 2025  5:13:21 PM: 
+ exercises.c | 40 +++++++++++++++++++---------------------
+ 1 file changed, 19 insertions(+), 21 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:130:29: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+            void *caracter = cadena[i];
+                             ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+22e4184
